@@ -38,5 +38,5 @@ Edit `index.html` directly on GitHub (pencil icon → commit). Auto-deploys in 6
 
 ## Contact
 
-vidhyatrdev@gmail.com · +91 98478 58407
+vidhya25rajan@gmail.com
 linkedin.com/in/vidhya-rajan-a07443164
