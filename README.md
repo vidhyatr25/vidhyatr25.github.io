@@ -1,6 +1,6 @@
 # Vidhya T R — Portfolio
 
-**Live:** https://YOUR_USERNAME.github.io
+**Live:** https://vidhyatr25.github.io
 
 Technical Product Manager & Full-Stack Engineer with 5+ years building AI-powered enterprise applications in fintech. Available in Germany via Chancenkarte.
 
@@ -15,11 +15,11 @@ Technical Product Manager & Full-Stack Engineer with 5+ years building AI-powere
 
 ## Deploy in 3 steps
 
-1. Create repo named `YOUR_USERNAME.github.io`
+1. Create repo named `vidhyatr25.github.io`
 2. Upload all files
 3. Settings → Pages → Source: main → Save
 
-Live in ~60 seconds at `https://YOUR_USERNAME.github.io`
+Live in ~60 seconds at `https://vidhyatr25.github.io`
 
 ## How to update
 
@@ -33,7 +33,7 @@ Edit `index.html` directly on GitHub (pencil icon → commit). Auto-deploys in 6
 | Skills | `skill-group-title` |
 | GitHub repos | `repos-grid` |
 | Photo | `photo-circle` — swap `VR` with `<img src="photo.jpg" />` |
-| GitHub URL | Replace `YOUR_USERNAME` everywhere |
+| GitHub URL | Replace `vidhyatr25` everywhere |
 | XING URL | Replace `YOUR_XING` |
 
 ## Contact
