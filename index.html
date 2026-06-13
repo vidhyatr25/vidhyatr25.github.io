@@ -58,9 +58,20 @@ body{
   cursor:none;
   line-height:1.65;
 }
-a{color:var(--accent-light);text-decoration:none;transition:color 0.2s;}
+a{color:var(--accent-light);text-decoration:none;transition:color 0.2s;cursor:pointer;}
 a:hover{color:var(--accent);}
 ::selection{background:var(--accent);color:#fff;}
+
+/* ===== CLICKABILITY FIX ===== */
+/* Ensure all anchor and button elements are always clickable and show pointer cursor,
+   overriding the cursor:none set on body for the custom cursor effect. */
+a, button,
+a[href], button[type],
+.project-gh-btn, .project-demo-btn, .btn-primary, .btn-secondary,
+.btn-nav-cta, .contact-link, .nav-links a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
 
 /* ===== CUSTOM CURSOR ===== */
 #cur-dot{
@@ -119,7 +130,7 @@ a:hover{color:var(--accent);}
 .btn-nav-cta{
   background:linear-gradient(135deg,var(--accent),var(--accent-light));
   color:#fff;padding:9px 22px;border-radius:100px;
-  font-weight:700;font-size:0.85rem;border:none;cursor:none;
+  font-weight:700;font-size:0.85rem;border:none;cursor:pointer;
   white-space:nowrap;transition:opacity 0.2s,transform 0.2s;
   box-shadow:0 4px 16px var(--accent-glow);
 }
@@ -127,13 +138,13 @@ a:hover{color:var(--accent);}
 #theme-toggle{
   background:var(--surface);border:1px solid var(--border);
   color:var(--text);width:38px;height:38px;border-radius:50%;
-  cursor:none;font-size:1rem;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;
   transition:background 0.2s,border 0.2s;flex-shrink:0;
 }
 #theme-toggle:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
 #hamburger{
   display:none;flex-direction:column;gap:5px;
-  background:none;border:none;cursor:none;padding:6px;
+  background:none;border:none;cursor:pointer;padding:6px;
 }
 #hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s;display:block;}
 #mobile-menu{
@@ -237,7 +248,7 @@ section{position:relative;z-index:1;}
 .btn-primary{
   background:linear-gradient(135deg,var(--accent),var(--accent-light));
   color:#fff;padding:16px 36px;border-radius:100px;
-  font-weight:700;font-size:0.96rem;border:none;cursor:none;
+  font-weight:700;font-size:0.96rem;border:none;cursor:pointer;
   box-shadow:0 6px 28px var(--accent-glow);
   transition:transform 0.2s,box-shadow 0.2s;
 }
@@ -246,7 +257,7 @@ section{position:relative;z-index:1;}
   background:transparent;color:var(--text);
   padding:14px 32px;border-radius:100px;
   font-weight:600;font-size:0.96rem;
-  border:2px solid var(--border);cursor:none;
+  border:2px solid var(--border);cursor:pointer;
   transition:border-color 0.2s,color 0.2s,background 0.2s;
 }
 .btn-secondary:hover{border-color:var(--accent-light);color:var(--accent-light);background:rgba(123,92,240,0.07);}
@@ -376,7 +387,7 @@ section{position:relative;z-index:1;}
 .case-studies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.8rem;}
 .cs-card{
   background:var(--surface);border:1px solid var(--border-subtle);
-  border-radius:var(--radius);padding:2.2rem;cursor:none;
+  border-radius:var(--radius);padding:2.2rem;cursor:default;
   transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;
   position:relative;overflow:hidden;
   backdrop-filter:blur(10px);
@@ -454,7 +465,7 @@ section{position:relative;z-index:1;}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.8rem;}
 .project-card{
   background:var(--surface);border:1px solid var(--border-subtle);
-  border-radius:var(--radius);padding:2.2rem;cursor:none;
+  border-radius:var(--radius);padding:2.2rem;cursor:default;
   transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;
   position:relative;overflow:hidden;
 }
@@ -483,7 +494,7 @@ section{position:relative;z-index:1;}
 .project-expand-btn{
   background:none;border:1px solid var(--border);color:var(--text-muted);
   font-size:0.8rem;font-weight:600;padding:6px 15px;border-radius:100px;
-  cursor:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;
+  cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;
 }
 .project-expand-btn:hover{border-color:var(--accent-light);color:var(--accent-light);}
 .project-action-row{display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;margin-top:1rem;}
@@ -500,7 +511,7 @@ section{position:relative;z-index:1;}
   font-size:0.78rem;font-weight:600;
   color:var(--accent-light);border:1px solid var(--accent);
   background:rgba(123,92,240,0.08);border-radius:100px;padding:5px 13px;
-  cursor:none;transition:all 0.2s;
+  cursor:pointer;transition:all 0.2s;
 }
 .project-demo-btn:hover{background:rgba(123,92,240,0.18);box-shadow:0 0 14px var(--accent-glow);}
 .project-detail{max-height:0;overflow:hidden;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1);}
@@ -596,7 +607,7 @@ section{position:relative;z-index:1;}
   background:var(--surface);border:1px solid var(--border-subtle);
   border-radius:var(--radius);padding:1.3rem 1.6rem;
   color:var(--text-muted);font-weight:600;font-size:0.9rem;
-  transition:all 0.25s;cursor:none;
+  transition:all 0.25s;cursor:pointer;
 }
 .contact-link:hover{border-color:var(--accent);color:var(--accent-light);transform:translateY(-3px);box-shadow:0 10px 36px var(--accent-glow);}
 .contact-link-icon{font-size:1.35rem;flex-shrink:0;}
