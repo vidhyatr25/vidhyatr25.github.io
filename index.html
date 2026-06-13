@@ -1,470 +1,1359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vidhya T R — Technical Product Manager & Full-Stack Engineer</title>
-  <meta name="description" content="Technical Product Manager and Full-Stack Engineer with 5+ years building AI-powered fintech products. Available in Germany via Chancenkarte — no visa sponsorship needed." />
-  <meta name="keywords" content="Technical Product Manager, Full Stack Engineer, AI Products, Fintech, React, NestJS, AWS, Germany, Chancenkarte" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--ink:#0f0e0c;--paper:#f5f2eb;--cream:#ede9df;--accent:#c94f2c;--muted:#7a7166;--border:#d4cfc5;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'JetBrains Mono',monospace}
-    html{scroll-behavior:smooth}
-    body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(245,242,235,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .nav-logo{font-family:var(--serif);font-size:1.2rem;color:var(--ink);text-decoration:none}
-    .nav-links{display:flex;gap:2.5rem;list-style:none}
-    .nav-links a{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
-    .nav-links a:hover{color:var(--accent)}
-    .nav-cta{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.2rem;background:var(--accent);color:white;text-decoration:none;border-radius:2px;transition:background 0.2s}
-    .nav-cta:hover{background:#a83d22}
-    .germany-banner{background:#1a3a1a;color:#a8d4b5;padding:0.65rem 4rem;font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;gap:1rem;margin-top:66px}
-    .gdot{width:7px;height:7px;border-radius:50%;background:#5cb87a;animation:pulse 2s infinite;flex-shrink:0}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-    .hero{min-height:calc(100vh - 107px);display:grid;grid-template-columns:1fr 1fr}
-    .hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem;border-right:1px solid var(--border)}
-    .hero-tag{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem}
-    .hero-tag::before{content:'';display:block;width:2rem;height:1px;background:var(--accent)}
-    h1{font-family:var(--serif);font-size:clamp(2.6rem,4vw,4rem);line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.4rem}
-    h1 em{font-style:italic;color:var(--accent)}
-    .hero-sub{font-size:1rem;color:var(--muted);max-width:430px;margin-bottom:2rem;line-height:1.75}
-    .hero-ctas{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.8rem}
-    .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all 0.2s;cursor:pointer;border:none}
-    .btn-primary{background:var(--accent);color:white}
-    .btn-primary:hover{background:#a83d22;transform:translateY(-1px)}
-    .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--border)}
-    .btn-outline:hover{border-color:var(--ink);transform:translateY(-1px)}
-    .btn-green{background:#1a3a1a;color:#a8d4b5}
-    .btn-green:hover{background:#0f2410;transform:translateY(-1px)}
-    .open-pill{display:inline-flex;align-items:center;gap:0.6rem;padding:0.5rem 1rem;background:#e8f4ec;border:1px solid #b5d9be;border-radius:20px;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:#2a6b3c;text-transform:uppercase;width:fit-content}
-    .open-dot{width:7px;height:7px;border-radius:50%;background:#2a6b3c;animation:pulse 2s infinite}
-    .hero-right{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem;gap:1.2rem}
-    .photo-block{display:flex;align-items:center;gap:1.5rem;padding:1.5rem;border:1px solid var(--border);background:var(--cream)}
-    .photo-circle{width:76px;height:76px;border-radius:50%;background:var(--border);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.7rem;color:var(--accent);flex-shrink:0;overflow:hidden}
-    .photo-circle img{width:100%;height:100%;object-fit:cover;border-radius:50%}
-    .photo-name{font-family:var(--serif);font-size:1.1rem;margin-bottom:0.2rem}
-    .photo-role{font-size:0.82rem;color:var(--muted);margin-bottom:0.4rem}
-    .photo-loc{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.06em;color:var(--muted);text-transform:uppercase}
-    .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--border);background:var(--border)}
-    .stat{background:var(--paper);padding:1.4rem 2rem}
-    .stat-num{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--ink);margin-bottom:0.35rem}
-    .stat-num span{color:var(--accent)}
-    .stat-label{font-family:var(--mono);font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
-    section{padding:5.5rem 4rem;border-top:1px solid var(--border)}
-    .section-header{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:3.5rem}
-    .section-num{font-family:var(--mono);font-size:0.7rem;color:var(--muted);letter-spacing:0.1em}
-    h2{font-family:var(--serif);font-size:clamp(1.7rem,2.8vw,2.6rem);letter-spacing:-0.02em;line-height:1.1}
-    .experience-grid{display:grid;grid-template-columns:250px 1fr;gap:0}
-    .exp-sidebar{border-right:1px solid var(--border);padding-right:3rem}
-    .exp-nav-item{display:block;padding:1rem 0;font-family:var(--mono);font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;transition:color 0.2s}
-    .exp-nav-item:hover,.exp-nav-item.active{color:var(--accent)}
-    .exp-nav-item.active{padding-left:1rem;border-left:2px solid var(--accent);margin-left:-1px}
-    .exp-content{padding-left:3.5rem}
-    .exp-panel{display:none}
-    .exp-panel.active{display:block}
-    .exp-role{font-family:var(--serif);font-size:1.55rem;margin-bottom:0.3rem}
-    .exp-meta{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase;margin-bottom:1.8rem;display:flex;gap:1.5rem;flex-wrap:wrap}
-    .exp-meta span{color:var(--accent)}
-    .exp-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:2rem}
-    .highlight-card{background:var(--paper);padding:1.2rem 1.5rem}
-    .highlight-num{font-family:var(--serif);font-size:1.8rem;color:var(--accent);line-height:1;margin-bottom:0.3rem}
-    .highlight-label{font-size:0.76rem;color:var(--muted)}
-    .exp-list{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
-    .exp-list li{padding-left:1.2rem;position:relative;color:var(--ink);font-size:0.92rem;line-height:1.65}
-    .exp-list li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:0.8rem;top:0.1em}
-    .cases-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border)}
-    .case-card{padding:3rem;border-bottom:1px solid var(--border);transition:background 0.2s}
-    .case-card:last-child{border-bottom:none}
-    .case-card:hover{background:var(--cream)}
-    .case-top{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:1.5rem}
-    .case-num{font-family:var(--mono);font-size:0.63rem;letter-spacing:0.15em;color:var(--muted);text-transform:uppercase;margin-bottom:0.6rem}
-    .case-title{font-family:var(--serif);font-size:1.45rem;line-height:1.2;margin-bottom:0.6rem}
-    .case-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
-    .tag{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.22rem 0.6rem;border:1px solid var(--border);color:var(--muted);border-radius:1px}
-    .case-metric-big{text-align:right;flex-shrink:0}
-    .case-metric-num{font-family:var(--serif);font-size:2.4rem;color:var(--accent);line-height:1}
-    .case-metric-label{font-size:0.73rem;color:var(--muted)}
-    .case-story{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-    .story-block-title{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
-    .story-block-text{font-size:0.87rem;color:var(--muted);line-height:1.72}
-    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
-    .skill-group{background:var(--paper);padding:2.2rem}
-    .skill-group-title{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border)}
-    .skill-list{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
-    .skill-list li{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem}
-    .skill-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--border);flex-shrink:0}
-    .github-section{background:var(--ink);color:var(--paper);padding:5rem 4rem}
-    .repos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);margin-top:3rem}
-    .repo-card{background:rgba(255,255,255,0.03);padding:2rem;transition:background 0.2s}
-    .repo-card:hover{background:rgba(255,255,255,0.07)}
-    .repo-name{font-family:var(--mono);font-size:0.78rem;letter-spacing:0.05em;color:#7dd3a8;margin-bottom:0.5rem}
-    .repo-desc{font-size:0.84rem;color:rgba(245,242,235,0.5);line-height:1.65;margin-bottom:1rem}
-    .repo-tags{display:flex;flex-wrap:wrap;gap:0.3rem}
-    .repo-tag{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.12);color:rgba(245,242,235,0.45);border-radius:1px}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-    .about-left{padding-right:4rem;border-right:1px solid var(--border)}
-    .about-right{padding-left:4rem}
-    .about-text{font-size:0.98rem;line-height:1.8;color:var(--muted);margin-bottom:1.4rem}
-    .about-text strong{color:var(--ink)}
-    .cert-list{list-style:none;display:flex;flex-direction:column;gap:0.8rem}
-    .cert-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;border:1px solid var(--border);border-radius:2px}
-    .cert-icon{width:32px;height:32px;background:var(--cream);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-    .cert-name{font-size:0.84rem;font-weight:500;color:var(--ink)}
-    .cert-org{font-family:var(--mono);font-size:0.63rem;letter-spacing:0.06em;color:var(--muted);text-transform:uppercase}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-    .contact-left{padding-right:4rem;border-right:1px solid var(--border)}
-    .contact-right{padding-left:4rem}
-    .contact-desc{font-size:0.97rem;color:var(--muted);line-height:1.75;margin-bottom:2rem}
-    .contact-links-stack{display:flex;flex-direction:column;gap:0.7rem}
-    .contact-link-row{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.2rem;border:1px solid var(--border);text-decoration:none;color:var(--ink);transition:border-color 0.2s,background 0.2s}
-    .contact-link-row:hover{border-color:var(--accent);background:var(--cream)}
-    .contact-link-label{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:0.12rem}
-    .contact-link-val{font-size:0.88rem;color:var(--ink)}
-    .contact-form{display:flex;flex-direction:column;gap:1rem}
-    .form-group{display:flex;flex-direction:column;gap:0.4rem}
-    .form-label{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
-    .form-input,.form-textarea{width:100%;padding:0.75rem 1rem;background:white;border:1px solid var(--border);border-radius:2px;font-family:var(--sans);font-size:0.9rem;color:var(--ink);transition:border-color 0.2s;outline:none}
-    .form-input:focus,.form-textarea:focus{border-color:var(--accent)}
-    .form-textarea{resize:vertical;min-height:110px}
-    footer{background:var(--ink);color:rgba(245,242,235,0.3);text-align:center;padding:1.5rem 4rem;font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;border-top:1px solid rgba(245,242,235,0.08)}
-    @media(max-width:900px){
-      nav{padding:1rem 1.5rem}
-      .nav-links,.nav-cta{display:none}
-      .germany-banner{padding:0.65rem 1.5rem;font-size:0.6rem}
-      .hero{grid-template-columns:1fr;min-height:auto}
-      .hero-left{padding:4rem 1.5rem 2rem;border-right:none;border-bottom:1px solid var(--border)}
-      .hero-right{padding:2rem 1.5rem}
-      section{padding:4rem 1.5rem}
-      .experience-grid{grid-template-columns:1fr}
-      .exp-sidebar{border-right:none;border-bottom:1px solid var(--border);padding-right:0;padding-bottom:1.5rem;margin-bottom:2rem;display:flex;flex-wrap:wrap;gap:0.5rem}
-      .exp-nav-item.active{border-left:none;margin-left:0;padding-left:1rem;background:var(--accent);color:white}
-      .exp-content{padding-left:0}
-      .exp-highlights{grid-template-columns:1fr 1fr}
-      .case-top{grid-template-columns:1fr}
-      .case-metric-big{text-align:left}
-      .case-story{grid-template-columns:1fr;gap:1.2rem}
-      .skills-grid,.repos-grid{grid-template-columns:1fr}
-      .about-grid,.contact-grid{grid-template-columns:1fr}
-      .about-left{padding-right:0;border-right:none;border-bottom:1px solid var(--border);padding-bottom:3rem;margin-bottom:3rem}
-      .about-right{padding-left:0}
-      .contact-left{padding-right:0;border-right:none;border-bottom:1px solid var(--border);padding-bottom:3rem;margin-bottom:3rem}
-      .contact-right{padding-left:0}
-      .github-section{padding:4rem 1.5rem}
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vidhya T R — Technical Product Manager · AI &amp; Fintech Products</title>
+<meta name="description" content="Vidhya T R — Technical Product Manager with hands-on Full-Stack &amp; AI Engineering experience. 5+ years shipping document intelligence, multi-tenant auth, and microfrontend platforms at Alphastream.ai. Open to TPM roles in Germany and Europe. Chancenkarte Holder." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --accent: #7B5CF0;
+  --accent-light: #A78BFA;
+  --accent-glow: rgba(123,92,240,0.38);
+  --accent-subtle: rgba(123,92,240,0.12);
+  --bg: #07071a;
+  --bg2: #0d0d24;
+  --bg3: #13132e;
+  --surface: #161630;
+  --surface2: #1e1e3a;
+  --border: rgba(123,92,240,0.22);
+  --border-subtle: rgba(123,92,240,0.1);
+  --text: #eeeef8;
+  --text-muted: #8888b8;
+  --text-dim: #44446a;
+  --shadow: 0 4px 40px rgba(0,0,0,0.7);
+  --radius: 18px;
+  --radius-sm: 10px;
+}
+[data-theme="light"] {
+  --accent: #6d28d9;
+  --accent-light: #7C3AED;
+  --accent-glow: rgba(109,40,217,0.18);
+  --accent-subtle: rgba(109,40,217,0.08);
+  --bg: #ffffff;
+  --bg2: #f7f5ff;
+  --bg3: #ede9fe;
+  --surface: #ffffff;
+  --surface2: #f3f0ff;
+  --border: rgba(109,40,217,0.18);
+  --border-subtle: rgba(109,40,217,0.08);
+  --text: #0f0f1c;
+  --text-muted: #3d3d6a;
+  --text-dim: #9090b8;
+  --shadow: 0 4px 40px rgba(109,40,217,0.1);
+}
+
+/* ===== RESET ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  cursor:none;
+  line-height:1.65;
+}
+a{color:var(--accent-light);text-decoration:none;transition:color 0.2s;}
+a:hover{color:var(--accent);}
+::selection{background:var(--accent);color:#fff;}
+
+/* ===== CUSTOM CURSOR ===== */
+#cur-dot{
+  position:fixed;top:0;left:0;width:9px;height:9px;
+  background:var(--accent-light);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform 0.15s,background 0.2s,width 0.2s,height 0.2s;
+}
+#cur-ring{
+  position:fixed;top:0;left:0;width:38px;height:38px;
+  border:2px solid var(--accent);border-radius:50%;
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:width 0.25s,height 0.25s,border-color 0.2s,opacity 0.2s;
+  opacity:0.65;
+}
+#cur-dot.hovered{width:14px;height:14px;background:var(--accent);}
+#cur-ring.hovered{width:56px;height:56px;border-color:var(--accent-light);opacity:0.9;}
+@media(hover:none),(max-width:768px){body{cursor:auto;}#cur-dot,#cur-ring{display:none;}}
+
+/* ===== NAVBAR ===== */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6%;height:68px;
+  background:rgba(7,7,26,0.85);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border-subtle);
+  transition:background 0.35s,box-shadow 0.35s,border-color 0.35s;
+}
+[data-theme="light"] #navbar{background:rgba(255,255,255,0.88);}
+#navbar.scrolled{
+  box-shadow:0 4px 40px rgba(0,0,0,0.5);
+  border-bottom-color:var(--border);
+}
+.nav-logo{
+  font-weight:800;font-size:1.18rem;letter-spacing:-0.025em;
+  background:linear-gradient(135deg,var(--accent-light),var(--accent));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;flex-shrink:0;
+}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{
+  color:var(--text-muted);font-size:0.875rem;font-weight:500;
+  letter-spacing:0.025em;transition:color 0.2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-light));
+  border-radius:2px;transition:width 0.25s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
+.btn-nav-cta{
+  background:linear-gradient(135deg,var(--accent),var(--accent-light));
+  color:#fff;padding:9px 22px;border-radius:100px;
+  font-weight:700;font-size:0.85rem;border:none;cursor:none;
+  white-space:nowrap;transition:opacity 0.2s,transform 0.2s;
+  box-shadow:0 4px 16px var(--accent-glow);
+}
+.btn-nav-cta:hover{opacity:0.9;transform:translateY(-1px);color:#fff;}
+#theme-toggle{
+  background:var(--surface);border:1px solid var(--border);
+  color:var(--text);width:38px;height:38px;border-radius:50%;
+  cursor:none;font-size:1rem;display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s,border 0.2s;flex-shrink:0;
+}
+#theme-toggle:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
+#hamburger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:none;padding:6px;
+}
+#hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s;display:block;}
+#mobile-menu{
+  display:none;position:fixed;top:68px;left:0;right:0;
+  background:var(--bg2);border-bottom:1px solid var(--border);
+  padding:1.5rem 6%;z-index:999;flex-direction:column;gap:1.2rem;
+}
+#mobile-menu.open{display:flex;}
+#mobile-menu a{color:var(--text-muted);font-size:1rem;font-weight:500;}
+
+/* ===== LAYOUT ===== */
+section{position:relative;z-index:1;}
+.section-wrap{max-width:1120px;margin:0 auto;padding:108px 6%;}
+.section-label{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--accent-light);margin-bottom:0.8rem;
+}
+.section-title{
+  font-size:clamp(2rem,4.2vw,3.1rem);font-weight:800;
+  letter-spacing:-0.035em;margin-bottom:0.9rem;line-height:1.12;
+}
+.section-divider{
+  width:56px;height:4px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-light));
+  border-radius:4px;margin-bottom:3rem;
+}
+
+/* ===== HERO ===== */
+@keyframes hero-gradient-shift {
+  0%   { background-position: 50% -10%; }
+  33%  { background-position: 60% 5%; }
+  66%  { background-position: 40% -5%; }
+  100% { background-position: 50% -10%; }
+}
+@keyframes hero-glow-pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%     { opacity: 1; transform: scale(1.02); }
+}
+#hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:120px 6% 90px;
+  background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(123,92,240,0.45) 0%,rgba(59,130,246,0.18) 45%,transparent 75%);
+}
+.hero-inner{max-width:920px;width:100%;position:relative;z-index:2;}
+
+.hero-status{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(14,255,100,0.07);border:1px solid rgba(34,197,94,0.3);
+  border-radius:100px;padding:7px 20px;
+  font-size:0.78rem;font-weight:600;color:#4ade80;
+  margin-bottom:2rem;letter-spacing:0.07em;
+}
+.status-dot{
+  width:7px;height:7px;background:#4ade80;border-radius:50%;
+  animation:pulse-green 1.6s ease-in-out infinite;
+  box-shadow:0 0 8px rgba(74,222,128,0.7);
+}
+@keyframes pulse-green{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.4);opacity:0.5;}}
+
+.hero-role-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(123,92,240,0.14);border:1px solid var(--border);
+  border-radius:100px;padding:5px 16px;
+  font-size:0.8rem;font-weight:700;color:var(--accent-light);
+  letter-spacing:0.04em;margin-bottom:1.6rem;
+  font-family:'JetBrains Mono',monospace;
+}
+.hero-role-tag::before{content:'▸';color:var(--accent);margin-right:2px;}
+
+.hero-headline{
+  font-size:clamp(2.5rem,6.5vw,5rem);font-weight:900;
+  letter-spacing:-0.045em;line-height:1.07;
+  color:#ffffff;margin-bottom:1.8rem;
+}
+.hero-headline .highlight{
+  background:linear-gradient(135deg,var(--accent-light) 0%,var(--accent) 60%,#c084fc 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* TYPEWRITER */
+.hero-typewriter{
+  font-size:clamp(1rem,2.2vw,1.2rem);font-weight:600;
+  font-family:'JetBrains Mono',monospace;
+  color:var(--accent-light);margin-bottom:1.4rem;
+  min-height:1.8em;letter-spacing:0.02em;
+}
+.typewriter-cursor{
+  display:inline-block;width:2px;height:1.1em;
+  background:var(--accent-light);margin-left:2px;vertical-align:middle;
+  animation:blink-caret 0.75s step-end infinite;
+}
+@keyframes blink-caret{50%{opacity:0;}}
+
+.hero-bio{
+  font-size:clamp(1rem,2vw,1.12rem);color:#e2e8f0;
+  max-width:660px;margin:0 auto 2.8rem;line-height:1.78;
+}
+
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:4rem;}
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent-light));
+  color:#fff;padding:16px 36px;border-radius:100px;
+  font-weight:700;font-size:0.96rem;border:none;cursor:none;
+  box-shadow:0 6px 28px var(--accent-glow);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 44px var(--accent-glow);color:#fff;}
+.btn-secondary{
+  background:transparent;color:var(--text);
+  padding:14px 32px;border-radius:100px;
+  font-weight:600;font-size:0.96rem;
+  border:2px solid var(--border);cursor:none;
+  transition:border-color 0.2s,color 0.2s,background 0.2s;
+}
+.btn-secondary:hover{border-color:var(--accent-light);color:var(--accent-light);background:rgba(123,92,240,0.07);}
+
+.hero-stats{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  border:1px solid var(--border);border-radius:var(--radius);
+  background:var(--surface);overflow:hidden;max-width:720px;margin:0 auto;
+}
+.stat-block{
+  flex:1;min-width:150px;padding:1.6rem 1rem;text-align:center;
+  border-right:1px solid var(--border-subtle);transition:background 0.2s;
+}
+.stat-block:last-child{border-right:none;}
+.stat-block:hover{background:var(--surface2);}
+.stat-num{font-size:1.9rem;font-weight:800;color:var(--accent-light);font-family:'JetBrains Mono',monospace;line-height:1;}
+.stat-lbl{font-size:0.73rem;color:var(--text-dim);margin-top:6px;letter-spacing:0.04em;text-transform:uppercase;}
+
+.hero-availability{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.28);
+  border-radius:100px;padding:7px 20px;
+  font-size:0.78rem;font-weight:600;color:#60a5fa;
+  margin-bottom:1.4rem;letter-spacing:0.04em;
+}
+
+.chancenkarte-block{
+  background:linear-gradient(135deg,rgba(59,130,246,0.1) 0%,rgba(123,92,240,0.1) 100%);
+  border:1px solid rgba(59,130,246,0.35);
+  border-radius:14px;padding:1.4rem 1.7rem;
+  margin-top:2rem;
+}
+.chancenkarte-block .ck-title{
+  font-weight:700;font-size:0.88rem;color:#60a5fa;
+  letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.5rem;
+  display:flex;align-items:center;gap:8px;
+}
+.chancenkarte-block .ck-body{
+  font-size:0.88rem;color:var(--text-muted);line-height:1.7;
+}
+
+.hero-scroll-hint{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:var(--text-dim);font-size:0.7rem;letter-spacing:0.12em;
+  text-transform:uppercase;animation:float-down 2.8s ease-in-out infinite;
+}
+@keyframes float-down{0%,100%{transform:translateX(-50%) translateY(0);}55%{transform:translateX(-50%) translateY(9px);}}
+.scroll-chevron{
+  width:18px;height:18px;
+  border-right:2px solid var(--text-dim);
+  border-bottom:2px solid var(--text-dim);
+  transform:rotate(45deg);
+}
+
+/* ===== ABOUT ===== */
+#about{background:var(--bg2);}
+[data-theme="light"] #about{background:#f7f5ff;}
+.about-intro{text-align:center;max-width:720px;margin:0 auto 4.5rem;}
+.about-intro .section-divider{margin:0 auto 1.6rem;}
+.about-tagline{
+  font-size:1.08rem;color:var(--text-muted);font-style:italic;line-height:1.78;
+}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start;}
+.about-bio p{color:var(--text-muted);margin-bottom:1.15rem;font-size:1rem;line-height:1.85;}
+.about-bio p:last-child{margin-bottom:0;}
+.about-bio strong{color:var(--text);}
+.role-cards{display:flex;flex-direction:column;gap:1.1rem;}
+.role-card{
+  background:var(--surface);border:1px solid var(--border-subtle);
+  border-radius:14px;padding:1.5rem 1.7rem;
+  display:flex;align-items:flex-start;gap:1.1rem;
+  transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;
+  backdrop-filter:blur(6px);
+}
+.role-card:hover{border-color:var(--accent);transform:translateX(5px);box-shadow:0 6px 30px var(--accent-glow);}
+.role-card-icon{
+  width:46px;height:46px;border-radius:12px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:1.35rem;
+  background:var(--accent-subtle);border:1px solid var(--border);
+}
+.role-card-title{font-weight:700;font-size:0.97rem;margin-bottom:0.3rem;color:var(--text);}
+.role-card-desc{font-size:0.84rem;color:var(--text-muted);line-height:1.65;}
+
+/* ===== EXPERIENCE ===== */
+#experience{background:var(--bg);}
+.timeline{position:relative;padding-left:2.2rem;}
+.timeline::before{
+  content:'';position:absolute;left:3px;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,var(--accent) 0%,rgba(123,92,240,0.15) 100%);
+  border-radius:2px;
+}
+.timeline-item{position:relative;margin-bottom:2.5rem;}
+.timeline-item:last-child{margin-bottom:0;}
+.timeline-item::before{
+  content:'';position:absolute;left:-2.4rem;top:1.5rem;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--bg);
+  box-shadow:0 0 16px var(--accent-glow);
+}
+.exp-card{
+  background:var(--surface);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:2.2rem;
+  transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;
+  backdrop-filter:blur(8px);
+}
+.exp-card:hover{border-color:var(--accent);box-shadow:0 10px 44px var(--accent-glow);transform:translateX(5px);}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.4rem;}
+.exp-company{font-weight:800;font-size:1.12rem;color:var(--text);}
+.exp-period{
+  font-size:0.76rem;font-weight:600;font-family:'JetBrains Mono',monospace;
+  background:var(--accent-subtle);color:var(--accent-light);
+  padding:4px 13px;border-radius:100px;border:1px solid var(--border);
+  white-space:nowrap;
+}
+.exp-role{font-size:0.93rem;color:var(--accent-light);font-weight:600;margin-bottom:1.2rem;}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.exp-bullets li{
+  font-size:0.9rem;color:var(--text-muted);
+  padding-left:1.5rem;position:relative;line-height:1.7;
+}
+.exp-bullets li::before{content:'▸';position:absolute;left:0;color:var(--accent-light);}
+
+/* ===== CASE STUDIES ===== */
+#case-studies{background:var(--bg2);}
+[data-theme="light"] #case-studies{background:#ede9fe;}
+.case-studies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.8rem;}
+.cs-card{
+  background:var(--surface);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:2.2rem;cursor:none;
+  transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;
+  position:relative;overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+.cs-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-light),#c084fc);
+  opacity:0;transition:opacity 0.3s;
+}
+.cs-card::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at top left,rgba(123,92,240,0.06) 0%,transparent 60%);
+  opacity:0;transition:opacity 0.3s;
+}
+.cs-card:hover{border-color:var(--accent);box-shadow:0 14px 50px var(--accent-glow);transform:translateY(-6px);}
+.cs-card:hover::before,.cs-card:hover::after{opacity:1;}
+.cs-tag{
+  font-size:0.7rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;
+  color:var(--accent-light);background:var(--accent-subtle);
+  border:1px solid var(--border);border-radius:100px;
+  padding:4px 12px;display:inline-block;margin-bottom:1rem;
+}
+.cs-title{font-weight:800;font-size:1.1rem;margin-bottom:0.7rem;line-height:1.32;}
+.cs-desc{font-size:0.9rem;color:var(--text-muted);line-height:1.72;margin-bottom:1.5rem;}
+.cs-metrics{display:flex;gap:1.2rem;flex-wrap:wrap;padding-top:1.2rem;border-top:1px solid var(--border-subtle);}
+.cs-metric{text-align:center;}
+.cs-metric-num{font-size:1.35rem;font-weight:800;color:var(--accent-light);font-family:'JetBrains Mono',monospace;}
+.cs-metric-label{font-size:0.7rem;color:var(--text-dim);margin-top:3px;text-transform:uppercase;letter-spacing:0.04em;}
+
+/* ===== SKILLS ===== */
+#skills{background:var(--bg2);}
+[data-theme="light"] #skills{background:#f7f5ff;}
+#skills .section-wrap{padding-top:72px;padding-bottom:72px;}
+#skills .section-divider{margin-bottom:1.6rem;}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+@media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.skills-grid{grid-template-columns:1fr;}}
+.skill-group{
+  background:var(--surface);border:1px solid var(--border-subtle);
+  border-radius:var(--radius-sm);padding:1.1rem 1.2rem;
+  transition:border-color 0.22s,transform 0.22s;
+}
+.skill-group:hover{border-color:var(--accent);transform:translateY(-2px);}
+.skill-group-title{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--accent-light);
+  margin-bottom:0.65rem;display:flex;align-items:center;gap:7px;
+}
+.skill-group-title .sg-icon{font-size:1rem;}
+.skill-chips{display:flex;flex-wrap:wrap;gap:0.35rem;}
+.skill-chip{
+  position:relative;font-size:0.72rem;font-weight:500;
+  background:var(--surface2);color:var(--text-muted);
+  padding:3px 9px;border-radius:100px;border:1px solid var(--border-subtle);
+  transition:all 0.22s;cursor:default;
+}
+.skill-chip:hover{background:var(--accent-subtle);color:var(--accent-light);border-color:var(--accent);}
+/* Tooltip */
+.skill-chip[data-tip]:hover::after{
+  content:attr(data-tip);
+  position:absolute;bottom:calc(100% + 7px);left:50%;transform:translateX(-50%);
+  background:var(--surface2);border:1px solid var(--border);
+  color:var(--text);font-size:0.72rem;font-weight:500;line-height:1.4;
+  padding:5px 10px;border-radius:8px;white-space:nowrap;
+  box-shadow:0 4px 18px rgba(0,0,0,0.4);pointer-events:none;z-index:99;
+}
+.skill-chip[data-tip]:hover::before{
+  content:'';position:absolute;bottom:calc(100% + 1px);left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:var(--border);
+  pointer-events:none;z-index:99;
+}
+
+/* ===== PROJECTS ===== */
+#projects{background:var(--bg);}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.8rem;}
+.project-card{
+  background:var(--surface);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:2.2rem;cursor:none;
+  transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;
+  position:relative;overflow:hidden;
+}
+.project-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(123,92,240,0.09) 0%,transparent 55%);
+  opacity:0;transition:opacity 0.3s;
+}
+.project-card:hover{border-color:var(--accent);box-shadow:0 14px 50px var(--accent-glow);transform:translateY(-7px);}
+.project-card:hover::before{opacity:1;}
+.project-icon{font-size:2.1rem;margin-bottom:1.1rem;}
+.project-name{font-weight:800;font-size:1.12rem;margin-bottom:0.55rem;}
+.project-desc{font-size:0.9rem;color:var(--text-muted);line-height:1.72;margin-bottom:1.3rem;}
+.project-tags{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:1.1rem;}
+.tech-tag{
+  font-size:0.72rem;font-weight:600;font-family:'JetBrains Mono',monospace;
+  background:var(--accent-subtle);color:var(--accent-light);
+  padding:3px 10px;border-radius:100px;border:1px solid var(--border-subtle);
+}
+.project-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem;margin-bottom:0.6rem;}
+.project-status-badge{font-size:0.67rem;font-weight:700;font-family:'JetBrains Mono',monospace;padding:3px 9px;border-radius:100px;white-space:nowrap;flex-shrink:0;}
+.badge-live{background:rgba(34,197,94,0.12);color:#4ade80;border:1px solid rgba(34,197,94,0.3);}
+.badge-wip{background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.3);}
+.badge-oss{background:rgba(99,102,241,0.14);color:#a5b4fc;border:1px solid rgba(99,102,241,0.3);}
+.project-impact{font-size:0.78rem;font-weight:600;color:var(--accent-light);margin-bottom:0.6rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.01em;}
+.project-expand-btn{
+  background:none;border:1px solid var(--border);color:var(--text-muted);
+  font-size:0.8rem;font-weight:600;padding:6px 15px;border-radius:100px;
+  cursor:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;
+}
+.project-expand-btn:hover{border-color:var(--accent-light);color:var(--accent-light);}
+.project-action-row{display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;margin-top:1rem;}
+.project-gh-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:0.78rem;font-weight:600;font-family:'JetBrains Mono',monospace;
+  color:var(--text-muted);border:1px solid var(--border);
+  background:none;border-radius:100px;padding:5px 13px;
+  text-decoration:none;transition:all 0.2s;cursor:pointer;
+}
+.project-gh-btn:hover{border-color:#a5b4fc;color:#a5b4fc;}
+.project-demo-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:0.78rem;font-weight:600;
+  color:var(--accent-light);border:1px solid var(--accent);
+  background:rgba(123,92,240,0.08);border-radius:100px;padding:5px 13px;
+  cursor:none;transition:all 0.2s;
+}
+.project-demo-btn:hover{background:rgba(123,92,240,0.18);box-shadow:0 0 14px var(--accent-glow);}
+.project-detail{max-height:0;overflow:hidden;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1);}
+.project-detail.open{max-height:520px;}
+.project-detail-inner{
+  border-top:1px solid var(--border-subtle);padding-top:1.1rem;margin-top:1rem;
+  font-size:0.88rem;color:var(--text-muted);line-height:1.75;
+}
+.project-detail-inner ul{padding-left:0;display:flex;flex-direction:column;gap:0.45rem;}
+.project-detail-inner li{list-style:none;position:relative;padding-left:1.3rem;}
+.project-detail-inner li::before{content:'◆';position:absolute;left:0;font-size:0.48rem;color:var(--accent-light);top:7px;}
+/* Demo coming-soon badge */
+.demo-soon-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:0.67rem;font-weight:700;font-family:'JetBrains Mono',monospace;
+  background:rgba(251,191,36,0.10);color:#fbbf24;
+  border:1px solid rgba(251,191,36,0.28);border-radius:100px;
+  padding:3px 9px;white-space:nowrap;flex-shrink:0;
+  letter-spacing:0.03em;
+}
+/* GitHub button — dark style */
+.project-gh-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:0.78rem;font-weight:700;font-family:'JetBrains Mono',monospace;
+  color:#e6edf3;background:#21262d;
+  border:1px solid #30363d;border-radius:100px;padding:6px 14px;
+  text-decoration:none;cursor:pointer;transition:all 0.22s;
+}
+.project-gh-btn:hover{background:#2d333b;border-color:#8b949e;color:#ffffff;box-shadow:0 0 0 3px rgba(139,148,158,0.15);}
+/* Demo button — outlined/ghost style */
+.project-demo-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:0.78rem;font-weight:700;
+  color:var(--accent-light);background:transparent;
+  border:1.5px solid var(--accent);border-radius:100px;padding:5px 14px;
+  cursor:pointer;transition:all 0.22s;text-decoration:none;
+}
+.project-demo-btn:hover{background:rgba(123,92,240,0.14);box-shadow:0 0 16px var(--accent-glow);color:#fff;}
+.project-demo-btn.demo-disabled{
+  color:var(--text-dim);border-color:var(--border-subtle);cursor:default;
+}
+.project-demo-btn.demo-disabled:hover{background:transparent;box-shadow:none;color:var(--text-dim);}
+/* Project headline (punchy one-liner) */
+.project-headline{
+  font-size:0.93rem;font-weight:700;color:var(--text);
+  line-height:1.42;margin-bottom:0.7rem;
+}
+/* Bullet highlights visible above fold */
+.project-highlights{
+  list-style:none;display:flex;flex-direction:column;gap:0.4rem;
+  margin-bottom:1.1rem;padding:0;
+}
+.project-highlights li{
+  font-size:0.83rem;color:var(--text-muted);
+  padding-left:1.3rem;position:relative;line-height:1.6;
+}
+.project-highlights li::before{content:'▸';position:absolute;left:0;color:var(--accent-light);font-size:0.75rem;top:2px;}
+/* Demo video modal */
+.demo-modal-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,0.82);z-index:10000;
+  align-items:center;justify-content:center;backdrop-filter:blur(6px);
+}
+.demo-modal-overlay.open{display:flex;}
+.demo-modal{
+  background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  width:min(90vw,720px);max-height:90vh;overflow:hidden;position:relative;
+  box-shadow:0 24px 80px rgba(0,0,0,0.6);animation:modalIn 0.28s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes modalIn{from{transform:scale(0.88);opacity:0;}to{transform:scale(1);opacity:1;}}
+.demo-modal-header{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.5rem;border-bottom:1px solid var(--border-subtle);}
+.demo-modal-title{font-weight:800;font-size:1.05rem;}
+.demo-modal-close{background:none;border:none;color:var(--text-muted);font-size:1.4rem;cursor:pointer;line-height:1;padding:2px 6px;border-radius:6px;}
+.demo-modal-close:hover{color:var(--text);background:var(--surface-2);}
+.demo-modal-body{padding:1.5rem;}
+.demo-video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#0a0a14;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.demo-video-wrap video{width:100%;height:100%;object-fit:cover;}
+.demo-placeholder{text-align:center;color:var(--text-muted);}
+.demo-placeholder .dp-icon{font-size:3rem;margin-bottom:0.8rem;}
+.demo-placeholder p{font-size:0.9rem;line-height:1.6;}
+.demo-placeholder a{color:var(--accent-light);text-decoration:none;font-weight:600;}
+.demo-placeholder a:hover{text-decoration:underline;}
+.demo-modal-desc{margin-top:1rem;font-size:0.88rem;color:var(--text-muted);line-height:1.7;}
+
+/* ===== CONTACT ===== */
+#contact{background:var(--bg);}
+.contact-inner{max-width:720px;margin:0 auto;text-align:center;}
+.contact-inner .section-divider{margin:0.6rem auto 1rem;}
+.contact-sub{font-size:1rem;color:var(--text-muted);margin-bottom:3rem;line-height:1.78;}
+.contact-links{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2.5rem;}
+.contact-links .contact-link:last-child:nth-child(odd){grid-column:1 / -1;}
+.contact-link{
+  display:flex;align-items:center;gap:14px;
+  background:var(--surface);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:1.3rem 1.6rem;
+  color:var(--text-muted);font-weight:600;font-size:0.9rem;
+  transition:all 0.25s;cursor:none;
+}
+.contact-link:hover{border-color:var(--accent);color:var(--accent-light);transform:translateY(-3px);box-shadow:0 10px 36px var(--accent-glow);}
+.contact-link-icon{font-size:1.35rem;flex-shrink:0;}
+.contact-link-label{font-size:0.68rem;font-weight:500;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.09em;display:block;margin-bottom:2px;}
+.contact-link-val{font-size:0.88rem;}
+.location-note{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--surface);border:1px solid var(--border-subtle);
+  border-radius:100px;padding:9px 22px;font-size:0.85rem;color:var(--text-muted);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--bg2);border-top:1px solid var(--border-subtle);
+  padding:2rem 6%;text-align:center;
+  color:var(--text-dim);font-size:0.82rem;
+}
+footer span{color:var(--accent-light);}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:5px;}
+
+/* ===== GLOW ORBS ===== */
+@keyframes orb-drift-1 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%     { transform: translate(-40px, 30px) scale(1.07); }
+  66%     { transform: translate(25px, -20px) scale(0.95); }
+}
+@keyframes orb-drift-2 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  40%     { transform: translate(35px, -25px) scale(1.1); }
+  75%     { transform: translate(-20px, 15px) scale(0.93); }
+}
+.hero-orb{
+  position:absolute;border-radius:50%;pointer-events:none;
+  filter:blur(90px);z-index:1;
+}
+.orb-1{
+  width:600px;height:600px;background:rgba(123,92,240,0.32);
+  top:-150px;right:-180px;
+  animation: orb-drift-1 12s ease-in-out infinite;
+}
+.orb-2{
+  width:400px;height:400px;background:rgba(59,130,246,0.22);
+  bottom:-80px;left:-100px;
+  animation: orb-drift-2 15s ease-in-out infinite;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:960px){
+  .nav-links{display:none;}
+  #hamburger{display:flex;}
+  .btn-nav-cta{display:none;}
+}
+@media(max-width:768px){
+  .about-grid{grid-template-columns:1fr;gap:2.8rem;}
+  .contact-links{grid-template-columns:1fr;}
+  .hero-ctas{flex-direction:column;align-items:center;}
+  .section-wrap{padding:75px 5%;}
+  .stat-block{min-width:130px;padding:1.3rem 0.8rem;}
+}
+@media(max-width:480px){
+  .hero-stats{border-radius:14px;}
+  .stat-num{font-size:1.5rem;}
+}
+</style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-logo">Vidhya T R</a>
+<!-- Custom cursor -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-logo">Vidhya T R</div>
   <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#case-studies">Case Studies</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Hire me →</a>
+  <div class="nav-right">
+    <a href="#contact" class="btn-nav-cta">Get In Touch</a>
+    <button id="theme-toggle" title="Toggle theme">☀️</button>
+    <button id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<div class="germany-banner">
-  <span class="gdot"></span>
-  Available in Germany · Chancenkarte (Feb 2026 – Feb 2027) · No employer visa sponsorship needed · Can start immediately
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+  <a href="#case-studies" onclick="closeMobileMenu()">Case Studies</a>
+  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
 </div>
 
-<section class="hero" id="home" style="border-top:none;">
-  <div class="hero-left">
-    <div class="hero-tag">Technical Product Manager & Full-Stack Engineer</div>
-    <h1>Building <em>AI products</em> that actually ship.</h1>
-    <p class="hero-sub">5+ years owning product roadmaps and writing the code — from private credit platforms to LLM-powered document intelligence. Based in India, ready for Germany.</p>
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-inner">
+    <div class="hero-status">
+      <span class="status-dot"></span>
+      Open to Work
+    </div>
+
+    <div class="hero-availability" style="margin-top:0.5rem;">
+      🇩🇪 Chancenkarte Holder — Valid Feb 2026 to Feb 2027. Can work in Germany immediately.
+    </div>
+
+    <h1 class="hero-headline">
+      Technical Product Manager —<br>
+      <span class="highlight">AI &amp; Fintech Products</span>
+    </h1>
+
+    <div class="hero-typewriter" id="typewriter-text">
+      <span id="tw-word"></span><span class="typewriter-cursor"></span>
+    </div>
+
+    <p class="hero-bio">
+      I bridge product strategy and hands-on engineering — owning roadmaps, writing code, and shipping AI-powered products that solve real business problems.
+    </p>
+
     <div class="hero-ctas">
-      <a href="#projects" class="btn btn-primary">View Work →</a>
-      <a href="vidhya_tr_portfolio.pdf" class="btn btn-outline" download>Download PDF Portfolio</a>
-      <a href="#contact" class="btn btn-green">Open to Roles in 🇩🇪</a>
+      <a href="#case-studies" class="btn-primary">View Case Studies →</a>
+      <a href="https://linkedin.com/in/vidhyatr/" target="_blank" rel="noopener" class="btn-secondary">Download Resume</a>
     </div>
-    <div class="open-pill">
-      <span class="open-dot"></span>
-      Open to work · TPM / Product Engineering · Germany preferred
+
+    <div class="hero-stats">
+      <div class="stat-block">
+        <div class="stat-num">5+</div>
+        <div class="stat-lbl">Years Building</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">4</div>
+        <div class="stat-lbl">Case Studies</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">3×</div>
+        <div class="stat-lbl">Roles: PM + Dev + Squad Lead</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">🌍</div>
+        <div class="stat-lbl">Open to Relocate</div>
+      </div>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="photo-block">
-      <div class="photo-circle">
-        <!-- Replace with: <img src="photo.jpg" alt="Vidhya T R" /> -->
-        VR
-      </div>
-      <div>
-        <div class="photo-name">Vidhya T R</div>
-        <div class="photo-role">Technical PM · Full-Stack Engineer · AI Products</div>
-        <div class="photo-loc">📍 Thrissur, Kerala → 🇩🇪 Germany-ready</div>
-      </div>
-    </div>
-    <div class="stat-row">
-      <div class="stat"><div class="stat-num">80<span>%</span></div><div class="stat-label">Faster doc processing shipped</div></div>
-      <div class="stat"><div class="stat-num">50<span>%</span></div><div class="stat-label">Ops cost reduction delivered</div></div>
-    </div>
-    <div class="stat-row">
-      <div class="stat"><div class="stat-num">5<span>+</span></div><div class="stat-label">Years · PM + Engineering</div></div>
-      <div class="stat"><div class="stat-num">3<span>×</span></div><div class="stat-label">Roles: PM + Dev + Squad Lead</div></div>
-    </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-chevron"></div>
   </div>
 </section>
 
-<section id="work">
-  <div class="section-header"><span class="section-num">01 /</span><h2>Work Experience</h2></div>
-  <div class="experience-grid">
-    <div class="exp-sidebar">
-      <a class="exp-nav-item active" onclick="showExp('tpm',this)">Alphastream — TPM</a>
-      <a class="exp-nav-item" onclick="showExp('mts2',this)">Alphastream — MTS II</a>
-      <a class="exp-nav-item" onclick="showExp('mts1',this)">Alphastream — MTS I</a>
-      <a class="exp-nav-item" onclick="showExp('tcs',this)">TCS · H&amp;M</a>
-    </div>
-    <div class="exp-content">
-      <div class="exp-panel active" id="exp-tpm">
-        <div class="exp-role">Technical Product Manager</div>
-        <div class="exp-meta"><span>Alphastream.ai</span> Mar 2025 – Present · India</div>
-        <div class="exp-highlights">
-          <div class="highlight-card"><div class="highlight-num">80%</div><div class="highlight-label">Faster document processing</div></div>
-          <div class="highlight-card"><div class="highlight-num">50%</div><div class="highlight-label">Reduction in ops cost</div></div>
-          <div class="highlight-card"><div class="highlight-num">0→1</div><div class="highlight-label">AI products shipped</div></div>
-        </div>
-        <ul class="exp-list">
-          <li>Proposed and led <strong>Document Intelligence</strong> — unified AI product for document upload, taxonomy creation, clause extraction, and prompt-based optimization using vision models and LLMs; delivered 80% faster processing and 50% cost reduction.</li>
-          <li>Defined and shipped <strong>IC Memo &amp; IDR Memo MVP</strong>: template-driven LLM workflow generating PowerPoint-ready investment memos from uploaded source documents, validated with real client demos.</li>
-          <li>Acting Product Owner for <strong>Termgrid</strong> (private credit deal negotiation) and ARES client — owned delivery from requirement intake through release.</li>
-          <li>Defined <strong>Loan Document Processing</strong> workflows for credit agreements, term sheets, and commitment letters — structured extraction and validation reducing manual analyst effort.</li>
-          <li>Led cross-functional squad (frontend, backend, QA) — sprint planning, estimation, acceptance validation, and release readiness.</li>
-          <li>Running weekly customer feedback loops to validate product direction and align stakeholders on scope and trade-offs.</li>
-        </ul>
-      </div>
-      <div class="exp-panel" id="exp-mts2">
-        <div class="exp-role">Member of Technical Staff</div>
-        <div class="exp-meta"><span>Alphastream.ai</span> Jan 2024 – Feb 2025 · India</div>
-        <ul class="exp-list">
-          <li>Led full migration from monolithic frontend to <strong>microfrontends</strong> (single-spa, module federation) — teams now deploy independently.</li>
-          <li>Migrated legacy platform to <strong>Next.js</strong>, improving performance, Core Web Vitals, and maintainability.</li>
-          <li>Built multi-tenant authentication layer with <strong>Okta and Azure AD</strong> — new clients onboarded via config, no code changes.</li>
-          <li>Converted core components into <strong>shared libraries</strong>, eliminating duplication across squads.</li>
-          <li>Built event-driven search pipeline: <strong>DynamoDB Streams → Lambda → OpenSearch</strong> for near real-time contract compliance search.</li>
-          <li>Set up analytics infra: <strong>S3 data lake + Glue + Athena</strong> for queryable operational metrics.</li>
-          <li>Provisioned production AWS infra via CDK: VPC, ECS Fargate, API Gateway, Cognito, CloudWatch.</li>
-        </ul>
-      </div>
-      <div class="exp-panel" id="exp-mts1">
-        <div class="exp-role">Member of Technical Staff</div>
-        <div class="exp-meta"><span>Alphastream.ai</span> Jul 2022 – Dec 2023 · India</div>
-        <ul class="exp-list">
-          <li>Built <strong>React/TypeScript applications</strong> for financial analysts — document upload, clause annotation, extraction, and side-by-side legal document comparison.</li>
-          <li>Created interactive PDF/HTML highlighting using PSPDFKit, boosting analyst review efficiency.</li>
-          <li>Designed <strong>calculation &amp; validation framework</strong>: interest schedules, covenant checks, dynamic formula evaluation, and business rule enforcement.</li>
-          <li>Built real-time ESG and financial dashboards powered by <strong>Django REST APIs</strong>.</li>
-          <li>Implemented secure RBAC REST APIs integrated with <strong>OpenSearch/Elasticsearch</strong> for structured search and audit history.</li>
-          <li>Engineered web crawlers for live market intelligence extraction from news portals.</li>
-        </ul>
-      </div>
-      <div class="exp-panel" id="exp-tcs">
-        <div class="exp-role">Software Engineer</div>
-        <div class="exp-meta"><span>Tata Consultancy Services</span> Jan 2021 – Jul 2022 · Client: H&amp;M</div>
-        <ul class="exp-list">
-          <li>Maintained and scaled H&amp;M's tag design system across product lines.</li>
-          <li>Optimized MSSQL queries and stored procedures, cutting execution times and improving throughput.</li>
-          <li>Delivered data pipelines using <strong>Azure Data Factory and SQL</strong> for cross-system data integration.</li>
-          <li>Supported <strong>ASP.NET MVC</strong> and API development with Azure web app exposure.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="section-header"><span class="section-num">02 /</span><h2>Case Studies</h2></div>
-  <div class="cases-list">
-
-    <div class="case-card">
-      <div class="case-top">
-        <div>
-          <div class="case-num">Case Study 01 · AI Product · TPM Role</div>
-          <div class="case-title">Document Intelligence Platform</div>
-          <div class="case-tags"><span class="tag">LLMs</span><span class="tag">Vision Models</span><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">AWS</span><span class="tag">Product Ownership</span></div>
-        </div>
-        <div class="case-metric-big"><div class="case-metric-num">80%</div><div class="case-metric-label">faster processing</div></div>
-      </div>
-      <div class="case-story">
-        <div><div class="story-block-title">The Problem</div><div class="story-block-text">Analysts manually reviewed hundreds of pages of financial documents with no standardized extraction process. Each analyst had their own approach, causing inconsistencies, errors, and slow turnaround for client deliverables.</div></div>
-        <div><div class="story-block-title">What I Did</div><div class="story-block-text">Proposed and drove the product from 0→1. Evaluated page indexing strategies, vision models, and prompt-based extraction. Defined taxonomy creation workflows, managed the cross-functional backlog, and ran iterative client demos to validate accuracy and usability.</div></div>
-        <div><div class="story-block-title">The Outcome</div><div class="story-block-text">Delivered 80% faster document processing and 50% reduction in operational costs. Reduced analyst time-per-document from hours to minutes by standardizing extraction and eliminating manual review dependency.</div></div>
-      </div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-top">
-        <div>
-          <div class="case-num">Case Study 02 · Fintech Platform · Product Owner</div>
-          <div class="case-title">Termgrid — Private Credit Deal Negotiation</div>
-          <div class="case-tags"><span class="tag">Product Ownership</span><span class="tag">Fintech</span><span class="tag">NestJS</span><span class="tag">React</span><span class="tag">Agile</span></div>
-        </div>
-        <div class="case-metric-big"><div class="case-metric-num">0→1</div><div class="case-metric-label">product shipped</div></div>
-      </div>
-      <div class="case-story">
-        <div><div class="story-block-title">The Problem</div><div class="story-block-text">Private credit deal negotiations happened via email chains and unstructured documents — no platform for structured negotiation, version tracking, or workflow management, causing delays and compliance risk.</div></div>
-        <div><div class="story-block-title">What I Did</div><div class="story-block-text">Acted as Product Owner for the ARES client. Captured requirements, wrote user stories, managed the backlog, prioritized phased MVPs, and led sprint delivery across frontend, backend, and QA. Balanced short-term client needs against long-term scalability.</div></div>
-        <div><div class="story-block-title">The Outcome</div><div class="story-block-text">Delivered working negotiation platform from requirements through release. Reduced negotiation cycle time and manual documentation overhead for analyst and operations teams.</div></div>
-      </div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-top">
-        <div>
-          <div class="case-num">Case Study 03 · Architecture · Engineering Lead</div>
-          <div class="case-title">Monolith to Microfrontend Migration</div>
-          <div class="case-tags"><span class="tag">Next.js</span><span class="tag">Microfrontends</span><span class="tag">single-spa</span><span class="tag">Module Federation</span><span class="tag">TypeScript</span></div>
-        </div>
-        <div class="case-metric-big"><div class="case-metric-num">↑3×</div><div class="case-metric-label">release speed</div></div>
-      </div>
-      <div class="case-story">
-        <div><div class="story-block-title">The Problem</div><div class="story-block-text">The legacy monolithic frontend was a deployment bottleneck — every release required full team coordination. Shared code was duplicated. Performance was degrading and the codebase was increasingly hard to maintain.</div></div>
-        <div><div class="story-block-title">What I Did</div><div class="story-block-text">Led the migration to microfrontends using single-spa and module federation, simultaneously moving to Next.js. Converted core components into shared libraries. Managed the phased migration to avoid disrupting live client usage.</div></div>
-        <div><div class="story-block-title">The Outcome</div><div class="story-block-text">Teams deploy independently without cross-team coordination. Shared libraries eliminated duplication. Next.js improved Core Web Vitals significantly. Release cycle time dropped by roughly 3x post-migration.</div></div>
-      </div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-top">
-        <div>
-          <div class="case-num">Case Study 04 · Cloud &amp; Security · Full-Stack</div>
-          <div class="case-title">Multi-Tenant Auth + AWS Infrastructure at Scale</div>
-          <div class="case-tags"><span class="tag">Okta</span><span class="tag">Azure AD</span><span class="tag">AWS CDK</span><span class="tag">ECS Fargate</span><span class="tag">DynamoDB Streams</span><span class="tag">OpenSearch</span></div>
-        </div>
-        <div class="case-metric-big"><div class="case-metric-num">∞</div><div class="case-metric-label">client isolation</div></div>
-      </div>
-      <div class="case-story">
-        <div><div class="story-block-title">The Problem</div><div class="story-block-text">Each enterprise client required isolated authentication, custom access rules, and separate data boundaries — but per-client auth code was unsustainable. Contract search needed near real-time latency for compliance workflows.</div></div>
-        <div><div class="story-block-title">What I Did</div><div class="story-block-text">Built configurable multi-tenant auth using Okta and Azure AD. Provisioned all production AWS infra via CDK: VPC, ECS Fargate, API Gateway, Cognito, CloudWatch. Built event-driven search pipeline: DynamoDB Streams → Lambda → OpenSearch.</div></div>
-        <div><div class="story-block-title">The Outcome</div><div class="story-block-text">New enterprise clients onboard with zero code changes — only config. Contract-to-indexed search latency under 30 seconds. Infrastructure fully reproducible and auditable via CDK.</div></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="skills">
-  <div class="section-header"><span class="section-num">03 /</span><h2>Skills &amp; Stack</h2></div>
-  <div class="skills-grid">
-    <div class="skill-group"><div class="skill-group-title">Product &amp; Agile</div><ul class="skill-list"><li>Product Ownership &amp; Roadmapping</li><li>Backlog Management &amp; Prioritization</li><li>Sprint Planning &amp; Estimation</li><li>Stakeholder Management</li><li>MVP Scoping &amp; Solution Strategy</li><li>Cross-functional Squad Leadership</li><li>Release Management</li><li>Customer Feedback Loops</li><li>Certified ScrumMaster (CSM)</li></ul></div>
-    <div class="skill-group"><div class="skill-group-title">Frontend</div><ul class="skill-list"><li>React.js &amp; TypeScript</li><li>Next.js &amp; Vite</li><li>Microfrontends (single-spa, module federation)</li><li>MUI &amp; AG Grid</li><li>PSPDFKit (PDF annotation)</li><li>Shared Component Libraries</li><li>Performance Optimization</li></ul></div>
-    <div class="skill-group"><div class="skill-group-title">Backend &amp; APIs</div><ul class="skill-list"><li>NestJS &amp; FastAPI</li><li>Django &amp; Flask</li><li>REST APIs &amp; Microservices</li><li>Event-driven Architecture</li><li>Okta &amp; Azure AD Auth</li><li>RBAC &amp; Security Patterns</li><li>ASP.NET MVC</li></ul></div>
-    <div class="skill-group"><div class="skill-group-title">Cloud &amp; DevOps</div><ul class="skill-list"><li>AWS CDK, ECS Fargate, Lambda</li><li>S3, CloudFront, API Gateway</li><li>DynamoDB Streams &amp; OpenSearch</li><li>Glue &amp; Athena (data lake)</li><li>Azure Data Factory &amp; DevOps</li><li>Docker &amp; Kubernetes</li><li>Nginx &amp; Gunicorn</li></ul></div>
-    <div class="skill-group"><div class="skill-group-title">Databases</div><ul class="skill-list"><li>PostgreSQL &amp; MSSQL</li><li>MongoDB &amp; DynamoDB</li><li>OpenSearch / Elasticsearch</li><li>Redis</li><li>SQL Query Optimization</li></ul></div>
-    <div class="skill-group"><div class="skill-group-title">AI &amp; Data</div><ul class="skill-list"><li>LLM Workflows &amp; Prompt Engineering</li><li>Vision Models (document extraction)</li><li>Real-time Dashboards</li><li>Data Pipelines &amp; ETL</li><li>ESG &amp; Financial Data Integration</li><li>Web Crawlers &amp; Data Extraction</li></ul></div>
-  </div>
-</section>
-
-<section class="github-section" id="github" style="border-top:none;">
-  <div class="section-header" style="margin-bottom:0.5rem;">
-    <span class="section-num" style="color:rgba(245,242,235,0.35);">04 /</span>
-    <h2 style="color:var(--paper);">GitHub</h2>
-  </div>
-  <p style="color:rgba(245,242,235,0.45);font-size:0.88rem;margin-bottom:0;">Architecture write-ups and documented open work — <a href="https://github.com/vidhyatr25" target="_blank" style="color:#7dd3a8;text-decoration:none;">github.com/vidhyatr25</a></p>
-  <div class="repos-grid">
-    <div class="repo-card">
-      <div class="repo-name">document-intelligence-notes</div>
-      <div class="repo-desc">Architecture notes for LLM-based document extraction pipelines — vision model evaluation, prompt strategies, taxonomy design, and workflow diagrams.</div>
-      <div class="repo-tags"><span class="repo-tag">LLMs</span><span class="repo-tag">Python</span><span class="repo-tag">FastAPI</span><span class="repo-tag">AWS</span></div>
-    </div>
-    <div class="repo-card">
-      <div class="repo-name">microfrontend-migration-guide</div>
-      <div class="repo-desc">Step-by-step notes from migrating a production monolith to single-spa microfrontends — module federation config, shared library setup, Next.js migration checklist.</div>
-      <div class="repo-tags"><span class="repo-tag">Next.js</span><span class="repo-tag">single-spa</span><span class="repo-tag">TypeScript</span></div>
-    </div>
-    <div class="repo-card">
-      <div class="repo-name">aws-multitenant-infra-cdk</div>
-      <div class="repo-desc">CDK patterns for multi-tenant SaaS: VPC, ECS Fargate, Cognito, API Gateway, CloudWatch, DynamoDB Streams to OpenSearch event pipeline, and Okta integration.</div>
-      <div class="repo-tags"><span class="repo-tag">AWS CDK</span><span class="repo-tag">TypeScript</span><span class="repo-tag">ECS</span></div>
-    </div>
-  </div>
-</section>
-
+<!-- ===== ABOUT ===== -->
 <section id="about">
-  <div class="section-header"><span class="section-num">05 /</span><h2>About Me</h2></div>
-  <div class="about-grid">
-    <div class="about-left">
-      <p class="about-text">I'm a <strong>Technical Product Manager and Full-Stack Engineer</strong> from Kerala, India, with over 5 years of experience building enterprise-grade applications where product thinking meets engineering execution.</p>
-      <p class="about-text">My career has been at <strong>Alphastream.ai</strong> — a fintech platform for private credit — where I grew from building React interfaces to owning entire AI product lines. I can define a product strategy, write the NestJS API, and review pull requests — often in the same day.</p>
-      <p class="about-text">I hold a <strong>Chancenkarte (Germany Opportunity Card)</strong> valid Feb 2026 – Feb 2027. I can start working in Germany immediately — no employer visa sponsorship needed, no lengthy processing. For employers, hiring me is as straightforward as hiring an EU national.</p>
-      <p class="about-text" style="margin-bottom:0;">B.Tech in Computer Science — Government Engineering College Sreekrishnapuram, Kerala (2020).</p>
+  <div class="section-wrap">
+    <div class="about-intro">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Engineering meets product vision</h2>
+      <div class="section-divider"></div>
+      <p class="about-tagline">I own both the roadmap and the repo — and ship what users actually need.</p>
     </div>
-    <div class="about-right">
-      <div style="margin-bottom:2.5rem;">
-        <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border);">Certifications</div>
-        <ul class="cert-list">
-          <li class="cert-item"><div class="cert-icon">☁️</div><div><div class="cert-name">Microsoft Azure Fundamentals (AZ-900)</div><div class="cert-org">Microsoft · 2020</div></div></li>
-          <li class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">Certified ScrumMaster (CSM)</div><div class="cert-org">Scrum Alliance</div></div></li>
-        </ul>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>I'm a <strong>Technical Product Manager</strong> with hands-on full-stack and AI engineering skills. I've owned product roadmaps end-to-end — from discovery and prioritisation to writing code, reviewing PRs, and shipping to production.</p>
+        <p>I'm now open to <strong>Technical PM, Founding Engineer, or AI product roles</strong> globally — with a focus on Germany and Europe. 🇩🇪 Chancenkarte Holder — Valid Feb 2026 to Feb 2027. Can work in Germany immediately.</p>
       </div>
-      <div style="margin-bottom:2.5rem;">
-        <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border);">Germany Visa Status</div>
-        <div style="padding:1.2rem;background:var(--cream);border:1px solid var(--border);font-size:0.87rem;color:var(--muted);line-height:1.75;">
-          <strong style="color:var(--ink);">Chancenkarte holder</strong> — valid Feb 2026 to Feb 2027.<br/>
-          Can work in Germany immediately. No employer sponsorship required. Eligible for EU Blue Card conversion on job offer.
+      <div class="role-cards">
+        <div class="role-card">
+          <div class="role-card-icon">📋</div>
+          <div>
+            <div class="role-card-title" style="font-size:1.08rem;">Product Manager</div>
+            <div class="role-card-desc">Discovery, roadmaps, prioritisation, stakeholder alignment, PRDs and acceptance criteria.</div>
+          </div>
+        </div>
+        <div class="role-card">
+          <div class="role-card-icon">💻</div>
+          <div>
+            <div class="role-card-title">Hands-On Engineer</div>
+            <div class="role-card-desc">What makes me a better PM — React · TypeScript · Node.js · FastAPI · AWS · Microservices · Auth</div>
+          </div>
+        </div>
+        <div class="role-card">
+          <div class="role-card-icon">🤖</div>
+          <div>
+            <div class="role-card-title">AI Product Builder</div>
+            <div class="role-card-desc">What I bring to AI-first teams — LLM workflows, RAG pipelines, document intelligence, agentic systems.</div>
+          </div>
+        </div>
+        <div class="chancenkarte-block" style="margin-top:1.2rem;">
+          <div class="ck-title">🇩🇪 Chancenkarte Holder</div>
+          <div class="ck-body">Valid Feb 2026 to Feb 2027. Can work in Germany immediately.</div>
         </div>
       </div>
-      <div>
-        <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border);">Other</div>
-        <ul class="skill-list"><li>WIT Learning Program Scholar</li><li>NSS Volunteer</li><li>TechFest Coding Event Coordinator</li></ul>
-      </div>
     </div>
   </div>
 </section>
 
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <div class="section-wrap">
+    <p class="section-label">Work History</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-divider"></div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">Alphastream.ai</div>
+            <div class="exp-period">Mar 2025 – Apr 2026</div>
+          </div>
+          <div class="exp-role">Technical Product Manager &amp; Full-Stack Engineer</div>
+          <ul class="exp-bullets">
+            <li>~80% reduction in manual document-processing effort, &gt;50% operational cost reduction, ~15% client satisfaction improvement.</li>
+            <li>Led Document Intelligence product: document upload, taxonomy creation, AI extraction, review workflows.</li>
+            <li>Template-driven IC Memo and IDR Memo workflows with retrieval-based backend and prompt-driven extraction.</li>
+            <li>Translated client needs into user stories, acceptance criteria, and demos for enterprise stakeholders.</li>
+            <li>Managed private credit deal lifecycle products like Termgrid (grid negotiation tool) using LLM and optimization techniques.</li>
+            <li>Owned end-to-end Agile delivery: grid-based term-sheet negotiation workflows, revision handling &amp; response lifecycle, precedence search for deal terms, real-time comments &amp; multi-party collaboration.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">Alphastream.ai</div>
+            <div class="exp-period">Jul 2022 – Feb 2025</div>
+          </div>
+          <div class="exp-role">Full Stack Engineer — Fintech · Private Credit</div>
+          <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.1rem;font-style:italic;">Fintech SaaS platform serving private credit and alternative investment workflows</div>
+          <ul class="exp-bullets">
+            <li>Built React/TypeScript apps for financial analysts covering legal/credit document processing, annotation, clause extraction, interest schedules, covenant checks, and dynamic formulas.</li>
+            <li>Developed enterprise web apps for 5+ clients using React, TypeScript, Next.js, NestJS, FastAPI, and AWS.</li>
+            <li>Implemented multi-tenant auth with Okta and Azure AD; RBAC; GDPR-aligned tenant separation.</li>
+            <li>Event-driven pipelines: DynamoDB Streams → Lambda → OpenSearch → S3 → Glue → Athena.</li>
+            <li>AWS infrastructure via CDK: VPC, ECS Fargate, API Gateway, Cognito, CloudWatch.</li>
+            <li>Migrated monolithic frontend to microfrontends (single-spa, module federation).</li>
+            <li>Integrations: AG Grid, PSPDFKit, MUI; Django APIs; OpenSearch/Elasticsearch search.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">Tata Consultancy Services (H&amp;M Client)</div>
+            <div class="exp-period">Jan 2021 – Jul 2022</div>
+          </div>
+          <div class="exp-role">Software Engineer</div>
+          <ul class="exp-bullets">
+            <li>ASP.NET MVC, SQL, Azure Data Factory; tag design workflow systems.</li>
+            <li>SQL query optimization; data integration pipelines.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE STUDIES ===== -->
+<section id="case-studies">
+  <div class="section-wrap">
+    <p class="section-label">Deep Dives</p>
+    <h2 class="section-title">Case Studies</h2>
+    <div class="section-divider"></div>
+    <div class="case-studies-grid">
+
+      <div class="cs-card">
+        <span class="cs-tag">Document Intelligence</span>
+        <div class="cs-title">AI-Powered Document Extraction Platform</div>
+        <div class="cs-desc">Led end-to-end product ownership of Alphastream's Document Intelligence feature — from taxonomy design and prompt engineering to React UI and FastAPI backend. Financial and legal analysts on Alphastream's private credit platform went from manual document extraction to a reviewable AI pipeline.</div>
+        <div class="cs-metrics">
+          <div class="cs-metric">
+            <div class="cs-metric-num">~80%</div>
+            <div class="cs-metric-label">Manual effort cut</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-num">&gt;50%</div>
+            <div class="cs-metric-label">Cost reduction</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-num">+15%</div>
+            <div class="cs-metric-label">Client satisfaction</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-card">
+        <span class="cs-tag">Platform Engineering</span>
+        <div class="cs-title">Microfrontend Migration for Enterprise SaaS</div>
+        <div class="cs-desc">Architected and executed the migration of Alphastream's monolithic React frontend to Webpack 5 Module Federation across multiple product teams, enabling independent deployments. Release cycle time dropped ~3x post-migration.</div>
+        <div class="cs-metrics">
+          <div class="cs-metric">
+            <div class="cs-metric-num">5+</div>
+            <div class="cs-metric-label">Apps migrated</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-num">~3x</div>
+            <div class="cs-metric-label">Faster releases</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-num">Single-spa</div>
+            <div class="cs-metric-label">Orchestration</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-card">
+        <span class="cs-tag">Auth &amp; Infrastructure</span>
+        <div class="cs-title">Multi-Tenant Auth &amp; AWS Pipeline</div>
+        <div class="cs-desc">Designed and shipped multi-tenant authentication (Okta + Azure AD) with RBAC and GDPR-aligned tenant separation for Alphastream's enterprise clients, alongside a fully serverless event-driven pipeline using DynamoDB Streams, Lambda, and OpenSearch.</div>
+        <div class="cs-metrics">
+          <div class="cs-metric">
+            <div class="cs-metric-num">Okta + AAD</div>
+            <div class="cs-metric-label">Auth providers</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-num">AWS CDK</div>
+            <div class="cs-metric-label">IaC stack</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-card">
+        <span class="cs-tag">IC Memo Workflow · LLM</span>
+        <div class="cs-title">Template-Driven Memo Generation (LLM)</div>
+        <div class="cs-desc">Owned Alphastream's IC Memo and IDR Memo product — template-driven workflows where analysts select a deal type, the system retrieves relevant document sections via RAG, and an LLM drafts the memo with human-in-the-loop review at every stage.</div>
+        <div class="cs-metrics">
+          <div class="cs-metric">
+            <div class="cs-metric-num">RAG</div>
+            <div class="cs-metric-label">Retrieval approach</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-num">HITL</div>
+            <div class="cs-metric-label">Review model</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="section-wrap">
+    <p class="section-label">Tech Stack</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="section-divider"></div>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="sg-icon">⚛️</span> Frontend</div>
+        <div class="skill-chips">
+          <span class="skill-chip" data-tip="5 years in production">React.js</span>
+          <span class="skill-chip" data-tip="Strictly typed everywhere">TypeScript</span>
+          <span class="skill-chip">Next.js</span>
+          <span class="skill-chip" data-tip="Module Federation + single-spa">Microfrontends</span>
+          <span class="skill-chip" data-tip="Enterprise data grids">AG Grid</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="sg-icon">🔧</span> Backend</div>
+        <div class="skill-chips">
+          <span class="skill-chip" data-tip="Python with FastAPI">Python / FastAPI</span>
+          <span class="skill-chip" data-tip="Node.js with NestJS">NestJS / Node.js</span>
+          <span class="skill-chip">REST APIs</span>
+          <span class="skill-chip" data-tip="Okta, Azure AD, Cognito">Auth (Okta / Azure AD)</span>
+          <span class="skill-chip">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="sg-icon">🤖</span> AI / LLM</div>
+        <div class="skill-chips">
+          <span class="skill-chip" data-tip="Retrieval-Augmented Generation">RAG Pipelines</span>
+          <span class="skill-chip">LLM Orchestration</span>
+          <span class="skill-chip" data-tip="Structured output, chain-of-thought">Prompt Engineering</span>
+          <span class="skill-chip">Document Extraction</span>
+          <span class="skill-chip">AI Agents</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="sg-icon">☁️</span> Cloud</div>
+        <div class="skill-chips">
+          <span class="skill-chip" data-tip="ECS · Lambda · S3">AWS (ECS / Lambda / S3)</span>
+          <span class="skill-chip" data-tip="DynamoDB and OpenSearch">DynamoDB / OpenSearch</span>
+          <span class="skill-chip">Docker</span>
+          <span class="skill-chip" data-tip="Infrastructure as Code">CDK</span>
+          <span class="skill-chip">CloudWatch</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="sg-icon">📋</span> PM Tools</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Product Discovery</span>
+          <span class="skill-chip">Roadmapping</span>
+          <span class="skill-chip" data-tip="Certified Scrum Master">Agile / Scrum (CSM)</span>
+          <span class="skill-chip">User Stories &amp; PRDs</span>
+          <span class="skill-chip">Stakeholder Alignment</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="section-wrap">
+    <p class="section-label">Side Work</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-divider"></div>
+    <div class="projects-grid">
+
+      <!-- PROJECT 1: Agentry -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">⚙️</div>
+          <span class="project-status-badge badge-oss">Open Source</span>
+        </div>
+        <div class="project-name">Agentry — Agentic Content Automation Engine</div>
+        <div class="project-impact">↳ Eliminates bespoke integration code — teams ship new AI workflows in minutes, not weeks</div>
+        <div class="project-desc">Content teams were burning engineering cycles on one-off LLM integrations. Agentry removes that bottleneck: define multi-step AI workflows in JSON, register any LLM provider or plugin, and deploy via GitHub Actions — zero glue code per new workflow. Cost-aware orchestration cuts LLM spend by ~40% by routing tasks to the cheapest capable model.</div>
+        <div class="project-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">JSON Workflows</span>
+          <span class="tech-tag">Provider Registry</span>
+          <span class="tech-tag">LLM Orchestration</span>
+          <span class="tech-tag">Visual Builder</span>
+          <span class="tech-tag">GitHub Actions</span>
+          <span class="tech-tag">Safety Guardrails</span>
+          <span class="tech-tag">Dashboard</span>
+        </div>
+        <div class="project-action-row">
+          <a class="project-gh-btn" href="https://github.com/vidhyatr25/agentry" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: MyWorkSpace -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">🧠</div>
+          <span class="project-status-badge badge-wip">In Progress</span>
+        </div>
+        <div class="project-name">MyWorkSpace — Universal AI Agent / Agentic Office System</div>
+        <div class="project-impact">↳ Replaces four separate tools with one context-aware system — tasks flow PM → Design → QA → Delivery without human hand-off</div>
+        <div class="project-desc">Solo teams waste hours context-switching across tools. MyWorkSpace solves this with a FastAPI routing brain that dispatches work to specialist AI agents — each with its own memory, skill registry, and isolated context. Persistent SQLite logs mean agents remember prior decisions. A React/TypeScript config panel keeps the whole office manageable without touching the backend.</div>
+        <div class="project-tags">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Routing Brain</span>
+          <span class="tech-tag">Specialist Agents</span>
+          <span class="tech-tag">Skill Registry</span>
+          <span class="tech-tag">Session Memory</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+        <div class="project-action-row">
+          <a class="project-gh-btn" href="https://github.com/vidhyatr25/myworkspace" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: TELC Exam Prep -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">🇩🇪</div>
+          <span class="project-status-badge badge-live">Live</span>
+        </div>
+        <div class="project-name">TELC Exam Prep App — German A1 / TELC Exam Prep</div>
+        <div class="project-impact">↳ Structured preparation that maps directly to the TELC exam format — built to pass, not just practice</div>
+        <div class="project-desc">Most German learning apps teach conversational vocabulary; the TELC A1 exam tests structured grammar and four specific skills. This app fills that gap: full syllabus alignment (Hören, Lesen, Schreiben, Sprechen), SM-2 spaced repetition for vocabulary, timed mock exams, and a progress dashboard that surfaces your weakest clusters. Built for my own Chancenkarte application and open-sourced for anyone making the same move.</div>
+        <div class="project-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Spaced Repetition</span>
+          <span class="tech-tag">Mock Exercises</span>
+          <span class="tech-tag">Progress Tracking</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">PostgreSQL</span>
+        </div>
+        <div class="project-action-row">
+          <a class="project-gh-btn" href="https://github.com/vidhyatr25/telc-prep" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: RAG Doc Intelligence -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">📄</div>
+          <span class="project-status-badge badge-oss">Open Source</span>
+        </div>
+        <div class="project-name">RAG Document Q&amp;A</div>
+        <div class="project-impact">↳ Lets enterprises query their own document repositories in plain English — no SQL, no data-engineering ticket needed</div>
+        <div class="project-desc">Enterprises sit on vast document repositories but can't query them without engineering effort. This production-ready RAG API changes that: upload any document set and ask questions in natural language. Semantic chunking, OpenSearch k-NN retrieval, and LLM-powered answers with source citations are all wired up and deployable to AWS Lambda out of the box.</div>
+        <div class="project-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">OpenSearch</span>
+          <span class="tech-tag">AWS Lambda</span>
+          <span class="tech-tag">RAG</span>
+        </div>
+        <div class="project-action-row">
+          <a class="project-gh-btn" href="https://github.com/vidhyatr25" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 5: Microfrontend Boilerplate -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">🧩</div>
+          <span class="project-status-badge badge-oss">Open Source</span>
+        </div>
+        <div class="project-name">Microfrontend Shell Boilerplate</div>
+        <div class="project-impact">↳ Breaks monolithic React apps into independently deployable microfrontends — teams ship without waiting on each other</div>
+        <div class="project-desc">Large React codebases force teams to coordinate every release. This open-source single-spa + Module Federation starter eliminates that coupling: each team owns and deploys their app independently, the shell composes them at runtime, and shared auth (Okta/Azure AD), design tokens, and a Playwright E2E suite are all pre-wired. Based on patterns from real enterprise migration work.</div>
+        <div class="project-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Module Federation</span>
+          <span class="tech-tag">single-spa</span>
+          <span class="tech-tag">Okta</span>
+          <span class="tech-tag">Playwright</span>
+        </div>
+        <div class="project-action-row">
+          <a class="project-gh-btn" href="https://github.com/vidhyatr25" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
 <section id="contact">
-  <div class="section-header"><span class="section-num">06 /</span><h2>Let's Talk</h2></div>
-  <div class="contact-grid">
-    <div class="contact-left">
-      <p class="contact-desc">Open to Technical PM, Product Engineering, or hybrid roles in Germany and remote-friendly European companies — fintech, AI, and enterprise SaaS preferred. Available immediately via Chancenkarte.</p>
-      <div class="contact-links-stack">
-        <a href="mailto:vidhyatrdev@gmail.com" class="contact-link-row"><div><span class="contact-link-label">Email</span><span class="contact-link-val">vidhyatrdev@gmail.com</span></div></a>
-        <a href="https://linkedin.com/in/vidhya-rajan-a07443164/" target="_blank" class="contact-link-row"><div><span class="contact-link-label">LinkedIn</span><span class="contact-link-val">linkedin.com/in/vidhya-rajan-a07443164</span></div></a>
-        <a href="https://www.xing.com/profile/YOUR_XING" target="_blank" class="contact-link-row"><div><span class="contact-link-label">XING (German market)</span><span class="contact-link-val">Add your XING profile URL</span></div></a>
-        <a href="https://github.com/vidhyatr25" target="_blank" class="contact-link-row"><div><span class="contact-link-label">GitHub</span><span class="contact-link-val">github.com/vidhyatr25</span></div></a>
-        <div class="contact-link-row" style="cursor:default;"><div><span class="contact-link-label">Phone</span><span class="contact-link-val">+91 98478 58407</span></div></div>
+  <div class="section-wrap">
+    <div class="contact-inner">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Let's Build Something</h2>
+      <div class="section-divider"></div>
+      <p class="contact-sub">Open to TPM, AI Product, and Founding PM roles — particularly product-led teams in fintech, legal-tech, or AI-first companies. Based in India, focused on Germany and Europe. 🇩🇪 Chancenkarte Holder — Valid Feb 2026 to Feb 2027. Can work in Germany immediately.</p>
+      <div class="contact-links">
+        <a href="mailto:vidhya25rajan@gmail.com" class="contact-link">
+          <span class="contact-link-icon">📧</span>
+          <div>
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-val">vidhya25rajan@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/vidhyatr/" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">💼</span>
+          <div>
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-val">linkedin.com/in/vidhyatr/</span>
+          </div>
+        </a>
+        <a href="https://github.com/vidhyatr25" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">🐙</span>
+          <div>
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-val">github.com/vidhyatr25</span>
+          </div>
+        </a>
+        <a href="https://www.xing.com/profile/vidhyatr" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon" style="font-size:1.05rem;font-weight:900;color:var(--accent-light);font-family:'JetBrains Mono',monospace;letter-spacing:-0.03em;">XING</span>
+          <div>
+            <span class="contact-link-label">XING</span>
+            <span class="contact-link-val">xing.com/profile/vidhyatr</span>
+          </div>
+        </a>
       </div>
-    </div>
-    <div class="contact-right">
-      <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;">Send a message</p>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-group"><label class="form-label">Your name</label><input class="form-input" type="text" placeholder="Jane Müller" required /></div>
-        <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="jane@company.de" required /></div>
-        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell me about the role or opportunity..."></textarea></div>
-        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message →</button>
-      </form>
-      <div id="form-success" style="display:none;margin-top:1rem;padding:1rem;background:var(--cream);border:1px solid var(--border);font-size:0.87rem;color:var(--muted);">Thanks! I'll reply within 24 hours.</div>
+      <div class="location-note">
+        📍 India · Chancenkarte · Open to Germany, UK &amp; Europe
+      </div>
+      <div style="margin-top:1.1rem;font-size:0.83rem;color:var(--text-muted);text-align:center;">
+        🇩🇪 Chancenkarte Holder — Valid Feb 2026 to Feb 2027. Can work in Germany immediately.
+      </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Vidhya T R &nbsp;·&nbsp; Available in Germany via Chancenkarte &nbsp;·&nbsp; Built with HTML &amp; intent</footer>
+<!-- Footer -->
+<footer>
+  <p>© 2026 <span>Vidhya T R</span> · Technical Product Manager · Built with care and code.</p>
+  <p style="margin-top:0.5rem;font-size:0.78rem;">
+    <a href="https://linkedin.com/in/vidhyatr/" target="_blank" rel="noopener" style="color:var(--text-muted);margin:0 0.5rem;">LinkedIn</a>·
+    <a href="https://github.com/vidhyatr25" target="_blank" rel="noopener" style="color:var(--text-muted);margin:0 0.5rem;">GitHub</a>·
+    <a href="https://www.xing.com/profile/vidhyatr" target="_blank" rel="noopener" style="color:var(--text-muted);margin:0 0.5rem;">XING</a>
+  </p>
+</footer>
 
 <script>
-  function showExp(id,el){
-    document.querySelectorAll('.exp-panel').forEach(p=>p.classList.remove('active'));
-    document.querySelectorAll('.exp-nav-item').forEach(n=>n.classList.remove('active'));
-    document.getElementById('exp-'+id).classList.add('active');
-    el.classList.add('active');
-  }
-  function handleSubmit(e){
-    e.preventDefault();
-    document.getElementById('form-success').style.display='block';
-    e.target.reset();
-  }
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
-  },{threshold:0.06});
-  document.querySelectorAll('.case-card,.skill-group,.cert-item,.repo-card,.stat,.photo-block').forEach(el=>{
-    el.style.opacity='0';el.style.transform='translateY(18px)';el.style.transition='opacity 0.5s ease,transform 0.5s ease';
-    obs.observe(el);
+/* ========== CURSOR (spring physics) ========== */
+(function() {
+  const dot = document.getElementById('cur-dot');
+  const ring = document.getElementById('cur-ring');
+  let mx = window.innerWidth / 2;
+  let my = window.innerHeight / 2;
+  // Spring state
+  let rx = mx, ry = my, vx = 0, vy = 0;
+  const STIFFNESS = 0.14, DAMPING = 0.72;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
   });
+
+  // Hover detection
+  document.addEventListener('mouseover', e => {
+    const t = e.target;
+    const isInteractive = t.matches('a,button,.role-card,.exp-card,.cs-card,.project-card,.skill-chip,.contact-link,.stat-block');
+    if (isInteractive) {
+      dot.classList.add('hovered');
+      ring.classList.add('hovered');
+    }
+  });
+  document.addEventListener('mouseout', e => {
+    const t = e.target;
+    const isInteractive = t.matches('a,button,.role-card,.exp-card,.cs-card,.project-card,.skill-chip,.contact-link,.stat-block');
+    if (isInteractive) {
+      dot.classList.remove('hovered');
+      ring.classList.remove('hovered');
+    }
+  });
+
+  function animRing() {
+    const ax = (mx - rx) * STIFFNESS;
+    const ay = (my - ry) * STIFFNESS;
+    vx = (vx + ax) * DAMPING;
+    vy = (vy + ay) * DAMPING;
+    rx += vx; ry += vy;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+})();
+
+/* ========== TYPEWRITER ========== */
+(function() {
+  var phrases = ['Full-Stack Engineer', 'AI Builder', 'Squad Lead & Delivery Owner', 'Founding PM'];
+  var el = document.getElementById('tw-word');
+  if (!el) return;
+  var pi = 0, ci = 0, deleting = false, wait = 0;
+  function tick() {
+    var phrase = phrases[pi];
+    if (!deleting) {
+      el.textContent = phrase.slice(0, ci + 1);
+      ci++;
+      if (ci === phrase.length) {
+        deleting = true;
+        wait = 22; // pause before deleting
+        setTimeout(tick, 1600);
+        return;
+      }
+      setTimeout(tick, 70);
+    } else {
+      if (wait > 0) { wait--; setTimeout(tick, 40); return; }
+      el.textContent = phrase.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) {
+        deleting = false;
+        pi = (pi + 1) % phrases.length;
+        setTimeout(tick, 400);
+        return;
+      }
+      setTimeout(tick, 38);
+    }
+  }
+  tick();
+})();
+
+/* ========== THEME TOGGLE ========== */
+(function() {
+  var btn = document.getElementById('theme-toggle');
+  document.documentElement.setAttribute('data-theme', 'dark');
+  btn.textContent = '☀️';
+  btn.addEventListener('click', function() {
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+    btn.textContent = isLight ? '☀️' : '🌙';
+  });
+})();
+
+/* ========== MOBILE MENU ========== */
+var hamburger = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+document.addEventListener('click', function(e) {
+  if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) mobileMenu.classList.remove('open');
+});
+
+/* ========== PROJECT EXPAND ========== */
+function toggleProject(btn) {
+  var card = btn.closest('.project-card');
+  var detail = card.querySelector('.project-detail');
+  var arrow = btn.querySelector('.arrow-icon');
+  var label = btn.querySelector('.btn-label');
+  var isOpen = detail.classList.toggle('open');
+  arrow.textContent = isOpen ? '▴' : '▾';
+  label.textContent = isOpen ? 'Close' : 'Details';
+}
+
+// Navbar: shadow + active link
+var navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 36) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  var current = '';
+  document.querySelectorAll('section[id]').forEach(function(s) {
+    if (window.scrollY >= s.offsetTop - 130) current = s.id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href === '#' + current) {
+      a.classList.add('active');
+    } else {
+      a.classList.remove('active');
+    }
+  });
+}, { passive: true });
 </script>
 </body>
 </html>
